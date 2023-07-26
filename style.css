@@ -1,0 +1,327 @@
+body {
+  background-color: #0e0f26;
+  padding: 10%;
+  color: white;
+  letter-spacing: 4px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+p {
+  margin-bottom: 200px;
+}
+
+/* press button */
+
+#btn {
+  text-decoration: none;
+  z-index: 9999999999;
+  color: rgb(252, 253, 253);
+  transition: all 200ms ease-in-out;
+  font-family: monospace;
+  box-shadow: 0px 0px 10px 1px rgb(160, 148, 251);
+
+  background-color: rgb(116, 118, 237);
+  border-radius: 15px;
+
+  cursor: pointer;
+  margin: 0px;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+@keyframes rotate-hue {
+  100% {
+    filter: hue-rotate(120deg);
+  }
+}
+#btn:hover {
+  background-color: transparent;
+  color: rgb(177, 249, 239);
+  animation: pulsate1 1s ease-in-out;
+  box-shadow: 0px 0px 10px 1px rgb(87, 66, 247);
+}
+@keyframes pulsate1 {
+  0% {
+    background-color: rgb(158, 109, 248);
+    box-shadow: 0 0 55px #1d0df8, 0 0 70px #8f71f2, 0 0 40px #bf05f8;
+  }
+}
+
+/* red off button */
+.off {
+  font-size: 30px;
+  color: #fe3b3b;
+  padding: 12px 20px;
+  box-shadow: 0px 0px 7px 1px rgb(252, 120, 188);
+  border: solid 2px red;
+  border-radius: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #fa3d5d, 0 0 20px #ff7340, 0 0 30px #fba3a9;
+  animation: flicker2 0.5s infinite alternate;
+  transition: 1s ease-in-out;
+  text-decoration: none;
+}
+
+@keyframes flicker2 {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px #ff002b, 0 0 20px #ff0048, 0 0 30px #ff0015;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 15px #ff000d, 0 0 25px #ff0037, 0 0 35px #ff001e;
+  }
+}
+.off:hover {
+  color: rgb(7, 7, 7);
+  text-shadow: 0 0 10px #24030d, 0 0 20px #460f1f, 0 0 30px #1f0409;
+  animation: burn-off 1.5s forwards;
+}
+@keyframes burn-off {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 10px #24030d, 0 0 20px #460f23, 0 0 30px #1f040a;
+  }
+  50% {
+    opacity: 0.1;
+
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 10px #130008, 0 0 20px #460f1b, 0 0 30px #1f0407;
+  }
+  70% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  80% {
+    opacity: 1;
+    color: #ff002f;
+    text-shadow: 0 0 10px #ff002f, 0 0 20px #ff0026, 0 0 30px #ff001e;
+  }
+  90% {
+    opacity: 0.1;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 0.2;
+    text-shadow: none;
+    box-shadow: none;
+    color: #fb1e1e9d;
+    border: solid 2px rgb(89, 2, 2);
+  }
+}
+
+/* Green ON button */
+.on {
+  font-size: 30px;
+  margin-left: 50px;
+  color: rgba(0, 255, 0, 0.123);
+  padding: 12px 20px;
+
+  border: solid 2px rgba(0, 255, 0, 0.036);
+  border-radius: 25px;
+  letter-spacing: 3px;
+
+  transition: 1s ease-in-out;
+  text-decoration: none;
+}
+
+.on:hover {
+  color: #c5ffc3; /* Light green color on hover */
+  text-shadow: 0 0 10px #c1ffc1, 0 0 20px #c3ffc3, 0 0 30px #c0ffc0; /* Light green text-shadow on hover */
+  box-shadow: 0px 0px 7px 1px rgb(120, 241, 252); /* Light green box-shadow on hover */
+  border: solid 2px #c5ffc3; /* Light green border on hover */
+  animation: flickerShivering 1.5s infinite; /* Adjust the animation duration for slower lightening effect on hover */
+}
+
+@keyframes flickerShivering {
+  0% {
+    color: #8ae187;
+    text-shadow: 0 0 10px #c1ffc1, 0 0 20px #c3ffc3, 0 0 30px #c0ffc0;
+    box-shadow: 0px 0px 7px 1px rgb(120, 241, 252);
+  }
+  50% {
+    color: #aaf882; /* Red color */
+    text-shadow: 0 0 10px #40fa3d, 0 0 20px #40ff53, 0 0 30px #a7fba3; /* Red text-shadow */
+    transform: translateX(-2px);
+    box-shadow: 0px 0px 7px 1px rgb(160, 252, 120);
+  }
+  55% {
+    color: transparent;
+    text-shadow: none;
+    transform: translateX(2px);
+  }
+  60% {
+    color: #91fc8d;
+    text-shadow: 0 0 10px #c1ffc1, 0 0 20px #c3ffc3, 0 0 30px #c0ffc0;
+    box-shadow: 0px 0px 7px 1px rgb(144, 252, 120);
+    transform: translateX(0);
+  }
+  100% {
+    color: #a5f7a2;
+    text-shadow: 0 0 10px #6cf36c, 0 0 20px #7ff37f, 0 0 30px #c0ffc0;
+  }
+}
+
+/* Button Beat */
+
+.Beat {
+  text-decoration: none;
+  z-index: 9999999999;
+  color: rgb(9, 9, 9);
+  font-family: monospace;
+  box-shadow: 0 0 5px #7697f9, 0 2px 5px #fbf8fb;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0px;
+  background-color: #3bf9b0;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+}
+
+/* Pulsating Animation  */
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 15px #275bf8, 0 0 15px #fbf8fb;
+  }
+  50% {
+    box-shadow: 0 10px 45px #70dcf9, 0 10px 55px #524dfa;
+  }
+  100% {
+    box-shadow: 0 0 45px #27f851, 0 0 70px #fdfdfd;
+  }
+}
+
+/* Pulsating Animation  */
+@keyframes pulsateBG {
+  0% {
+    background-color: #a7f175;
+  }
+  50% {
+    background-color: #070707;
+    color: white;
+  }
+  100% {
+    background-color: #f8f8fc;
+  }
+}
+
+/* Apply pulsating animation on hover */
+.Beat:hover {
+  animation: pulsate 1s ease-in-out infinite, pulsateBG 1s ease-in-out infinite;
+  border-style: none;
+}
+/* Open button */
+.open {
+  text-decoration: none;
+  color: rgb(4, 4, 4);
+  background-color: #9bf0a4;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 40px;
+  border-style: none;
+  text-align: center;
+  box-shadow: 0 5px 0 #1545f3, 0 5px 0px #0441f8, 0 5px 0px #1854ed;
+  animation: rotate-hue 2s alternate infinite;
+  transition: all 1.3s ease-in-out; /* Added transition property */
+  background-size: 200% auto; /* For linear gradient animation */
+  background-image: linear-gradient(
+    to right,
+    rgb(230, 221, 189),
+    rgb(128, 238, 246),
+    rgb(3, 40, 77),
+    rgb(2, 11, 246),
+    rgb(217, 252, 20),
+    rgb(92, 111, 238),
+    rgb(27, 27, 27)
+  );
+}
+
+/* Pulsating Animation for Open Button */
+@keyframes pulsate-open {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulsating animation on hover for Open Button */
+.open:hover {
+  animation: pulsate-open 0.5s ease-in-out infinite,
+    rotate-hue-hover 1s linear infinite; /* New hover animation */
+  box-shadow: 3px 5px 25px #0e1dec;
+  background-position: right center; /* Move the gradient to the right */
+  transform: scale(1.1);
+}
+
+.openText {
+  color: #f88c27;
+  font-size: 20px;
+  animation: rotate-hue 2s ease-in-out infinite;
+}
+
+/* Hover Animation for Background Gradient */
+@keyframes rotate-hue-hover {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+.rotate {
+  animation: rotate-hue 2s alternate infinite;
+}
+
+@keyframes rotate-hue {
+  100% {
+    filter: hue-rotate(100deg);
+  }
+}
+
+/* Slow Hover Animation for Background Gradient */
+@keyframes rotate-hue-background {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+/* Apply slow hover animation on background gradient */
+.open {
+  animation: rotate-hue-background 5s linear infinite;
+}
+/* live alarm */
+.live {
+  margin: auto 20px;
+  padding: 10px;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(250, 11, 39) /* , hsl(358, 96%, 59%) */;
+
+  animation: puls 1.5s infinite;
+}
+@keyframes puls {
+  0% {
+    box-shadow: #b796fa 0 0 0 0;
+  }
+
+  75% {
+    box-shadow: #f016f000 0 0 0 20px;
+  }
+}
