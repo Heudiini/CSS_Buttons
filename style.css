@@ -144,8 +144,8 @@ p {
     box-shadow: 0px 0px 7px 1px rgb(120, 241, 252);
   }
   50% {
-    color: #aaf882; /* Red color */
-    text-shadow: 0 0 10px #40fa3d, 0 0 20px #40ff53, 0 0 30px #a7fba3; /* Red text-shadow */
+    color: #aaf882; 
+    text-shadow: 0 0 10px #40fa3d, 0 0 20px #40ff53, 0 0 30px #a7fba3; /*  text-shadow */
     transform: translateX(-2px);
     box-shadow: 0px 0px 7px 1px rgb(160, 252, 120);
   }
